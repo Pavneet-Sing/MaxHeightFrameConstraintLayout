@@ -1,20 +1,21 @@
-apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 android {
     compileSdkVersion rootProject.configs.compileSdkVersion
     buildToolsVersion rootProject.configs.buildToolsVersion
+
+
     defaultConfig {
-        applicationId "com.pavneet_singh.demo.maxchildheightframelayout"
         minSdkVersion rootProject.configs.minSdkVersion
         targetSdkVersion rootProject.configs.targetSdkVersion
-        versionCode rootProject.configs.versionCode
-        versionName rootProject.configs.versionName
+        versionCode rootProject.configs.versionCode_lib
+        versionName rootProject.configs.versionName_lib
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -30,17 +31,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
     implementation "androidx.core:core-ktx:$rootProject.ktx_version"
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout"
     testImplementation "junit:junit:$rootProject.junit"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junit_ext"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
-    implementation project(path: ':maxchildheightframelayout')
 }
