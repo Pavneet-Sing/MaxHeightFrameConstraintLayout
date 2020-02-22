@@ -5,6 +5,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pavneet_singh.temp.BlueFragment
 import com.example.pavneet_singh.temp.YellowFragment
+import com.pavneet_singh.demo.maxchildheightframelayout.fragments.GreenFragment
 
 /**
  * Created by Pavneet_Singh on 2020-02-19.
@@ -25,8 +26,19 @@ class MainActivity : AppCompatActivity() {
             insertYellowFragment()
         }
 
+        findViewById<Button>(R.id.btn_show_green).setOnClickListener {
+            insertGreenFragment()
+        }
+
         // by default show the blue fragment
         insertBlueFragment()
+    }
+
+
+    private fun insertGreenFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container, GreenFragment())
+        transaction.commit()
     }
 
 
