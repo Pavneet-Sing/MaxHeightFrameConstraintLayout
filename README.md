@@ -16,7 +16,11 @@ Custom frame-layout to retain the maximum height from (any)child fragment and us
 
 <img src="https://user-images.githubusercontent.com/11755381/75091585-fdcfdb80-5594-11ea-913d-6024f40fe615.gif" width="350" height="600"/>
 
-### MaxChildHeightFrameLayout
+### MaxChildHeightFrameLayout as Fragment Container
+
+<img src="https://user-images.githubusercontent.com/11755381/75109968-4a2b2200-564e-11ea-9ac2-9da2270767fe.gif" width="350" height="600"/>
+
+### MaxChildHeightFrameLayout as Parent Container
 Either use `MaxChildHeightFrameLayout` as container or if you have more views which needs to be places right under the fragment then use
 
 ```
