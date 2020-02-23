@@ -42,5 +42,5 @@ dependencies {
     testImplementation "junit:junit:$rootProject.junit"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junit_ext"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
-    implementation project(path: ':maxchildheightframelayout')
+    implementation project(path: ':maxchildheightlayouts')
 }

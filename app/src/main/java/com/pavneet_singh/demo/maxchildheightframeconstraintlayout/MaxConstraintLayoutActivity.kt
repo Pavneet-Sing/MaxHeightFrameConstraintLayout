@@ -1,6 +1,9 @@
 package com.pavneet_singh.demo.maxchildheightframeconstraintlayout
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pavneet_singh.temp.BlueFragment
@@ -53,5 +56,15 @@ class MaxConstraintLayoutActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, BlueFragment())
         transaction.commit()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menu?.add(0,0,0,"Show FrameActivity")
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        startActivity(Intent(this, MaxFrameLayoutActivity::class.java))
+        return super.onOptionsItemSelected(item)
     }
 }

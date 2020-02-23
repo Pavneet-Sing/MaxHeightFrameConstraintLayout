@@ -1,2 +1,1 @@
-include ':app', ':maxchildheightframelayout'
-rootProject.name='MaxChildHeightFrameLayout'
+include ':app', ':maxchildheightlayouts'
