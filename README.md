@@ -1,14 +1,14 @@
-<h1 align="center">MaxChildHeightFramelayout</h1>
+<h1 align="center">MaxHeightFrameConstraintLayout</h1>
 <p align="center">
- <a href="https://jitpack.io/#Pavneet-Sing/MaxChildHeightFramelayout"> <img src="https://jitpack.io/v/Pavneet-Sing/MaxChildHeightFramelayout.svg" /></a>
-   <a href="https://kotlinlang.org"> <img src="https://img.shields.io/badge/Kotlin-1.3.61-blue.svg" /></a>
+  <a href="https://jitpack.io/#Pavneet-Sing/MaxHeightFrameConstraintLayout"> <img src="https://jitpack.io/v/Pavneet-Sing/MaxHeightFrameConstraintLayout.svg" /></a>
+  <a href="https://kotlinlang.org"> <img src="https://img.shields.io/badge/Kotlin-1.3.61-blue.svg" /></a>
   <a href="https://developer.android.com/guide/"> <img src="https://img.shields.io/badge/Platform-Android-green.svg" /></a>
   <a href="LICENSE/"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
 </p>
 
 Introduction
 ------------
-Custom frame-layout to retain the maximum height from (any)child fragment and use the same height to display other small fragments with extra height.
+Custom constraint and frame-layout to retain the maximum height from (any)child view or fragment. It uses the same height to display other small views or fragments with extra height.
 
 • Use-case: If you are using framelayout in any nested-scroll view then while replacing a bigger fragment with smaller one, will result in moving scroll view resize and scrolling which can be avoid by keeping the same height of bigger fragment while showing the small one.
 
@@ -16,11 +16,50 @@ Custom frame-layout to retain the maximum height from (any)child fragment and us
 
 <img src="https://user-images.githubusercontent.com/11755381/75091585-fdcfdb80-5594-11ea-913d-6024f40fe615.gif" width="350" height="600"/>
 
+### MaxHeightConstraintLayout as Fragment Container
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.pavneet_singh.maxchildheightlayout.MaxHeightConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+<!--        <OtherViews.../>-->
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btn_show_green" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/additional_text_nmore_data"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
+
+    </com.pavneet_singh.maxchildheightlayout.MaxHeightConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+```
+
+<img src="https://user-images.githubusercontent.com/11755381/75115513-2d5e1100-5685-11ea-87a5-8d092796ceb2.gif" width="350" height="600"/>
+
 ### MaxChildHeightFrameLayout as Fragment Container
 
-<img src="https://user-images.githubusercontent.com/11755381/75109968-4a2b2200-564e-11ea-9ac2-9da2270767fe.gif" width="350" height="600"/>
+<img src="https://i.stack.imgur.com/YE9u4.gif" width="350" height="600"/>
 
-### MaxChildHeightFrameLayout as Parent Container
+### MaxChildHeightFrameLayout as Parent Fragment Container
+
 Either use `MaxChildHeightFrameLayout` as container or if you have more views which needs to be places right under the fragment then use
 
 ```
@@ -49,9 +88,8 @@ Either use `MaxChildHeightFrameLayout` as container or if you have more views wh
         </com.pavneet_singh.maxchildheightframelayout.MaxChildHeightFrameLayout>
 
 ```
+<img src="https://user-images.githubusercontent.com/11755381/75115539-70b87f80-5685-11ea-86a1-b39c8fbf3077.gif" width="350" height="600"/>
 
-
-<img src="https://user-images.githubusercontent.com/11755381/75091134-112c7800-5590-11ea-8a7c-9c1e7c441b1f.gif" width="350" height="600"/>
 
 Gradle Implementation
 ---------------------
@@ -65,17 +103,18 @@ allprojects {
    }
 }
 ```
+
 2. Add the dependency in the app `build.gradle`
 
 ```gradle
 dependencies {
-    implementation 'com.github.Pavneet-Sing:MaxChildHeightFramelayout:version'
+    implementation 'com.github.Pavneet-Sing:MaxHeightFrameConstraintLayout:version'
   }
 ```
 e.g :
 
 ```
-implementation 'com.github.Pavneet-Sing:MaxChildHeightFramelayout:1.0.0-beta01'
+implementation 'com.github.Pavneet-Sing:MaxHeightFrameConstraintLayout:1.0.0-beta01'
 ```
 
 Contribution
