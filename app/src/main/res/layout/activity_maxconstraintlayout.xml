@@ -2,19 +2,18 @@
 
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/myScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.pavneet_singh.maxchildheightlayout.MaxHeightConstraintLayout
+        android:id="@+id/constraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="800dp"
             android:background="@color/grey_light"
             android:text="@string/some_long_text"
@@ -30,7 +29,7 @@
             android:layout_marginLeft="16dp"
             android:text="@string/show_blue"
             app:layout_constraintEnd_toStartOf="@+id/btn_show_yellow"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -41,7 +40,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="@string/show_yellow"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintStart_toEndOf="@+id/btn_show_blue"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -53,33 +52,23 @@
             android:layout_marginRight="16dp"
             android:text="@string/show_green"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintStart_toEndOf="@+id/btn_show_yellow"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <com.pavneet_singh.maxchildheightframelayout.MaxChildHeightFrameLayout
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="2dp"
-            app:layout_constraintTop_toBottomOf="@+id/btn_show_green">
+            app:layout_constraintTop_toBottomOf="@id/btn_show_green" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/additional_text_nmore_data"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_container" />
 
-                <FrameLayout
-                    android:id="@+id/fragment_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+    </com.pavneet_singh.maxchildheightlayout.MaxHeightConstraintLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/additional_text_nmore_data"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </com.pavneet_singh.maxchildheightframelayout.MaxChildHeightFrameLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

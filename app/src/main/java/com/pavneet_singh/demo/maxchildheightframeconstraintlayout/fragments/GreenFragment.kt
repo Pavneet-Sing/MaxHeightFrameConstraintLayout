@@ -1,22 +1,22 @@
-package com.example.pavneet_singh.temp
+package com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.pavneet_singh.demo.maxchildheightframelayout.R
+import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.R
 
 /**
  * Created by Pavneet_Singh on 2020-02-17.
  */
 
-class YellowFragment : Fragment() {
+class GreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.yellow, container, false)
+        return inflater.inflate(R.layout.green, container, false)
     }
 }

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">MaxChildHeightFrameLayout</string>
+    <string name="activity_constraint">MaxHeightConstraintLayout</string>
+    <string name="activity_frame">MaxChildHeightFrameLayout</string>
     <string name="show_yellow">show yellow</string>
     <string name="show_blue">show blue</string>
     <string name="some_long_text">What is Lorem Ipsum?\n\nLorem Ipsum is simply dummy text of the
@@ -22,5 +24,5 @@
         1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
         reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</string>
     <string name="show_green">show Green</string>
-    <string name="additional_text_nmore_data">additional text More data</string>
+    <string name="additional_text_nmore_data">additional text\n More data</string>
 </resources>

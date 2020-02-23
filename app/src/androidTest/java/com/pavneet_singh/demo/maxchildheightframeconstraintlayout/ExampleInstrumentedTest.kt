@@ -1,4 +1,4 @@
-package com.pavneet_singh.demo.maxchildheightframelayout
+package com.pavneet_singh.demo.maxchildheightframeconstraintlayout
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

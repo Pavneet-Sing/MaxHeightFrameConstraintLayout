@@ -8,7 +8,7 @@ android {
     compileSdkVersion rootProject.configs.compileSdkVersion
     buildToolsVersion rootProject.configs.buildToolsVersion
     defaultConfig {
-        applicationId "com.pavneet_singh.demo.maxchildheightframelayout"
+        applicationId "com.pavneet_singh.demo.maxchildheightframeconstraintlayout"
         minSdkVersion rootProject.configs.minSdkVersion
         targetSdkVersion rootProject.configs.targetSdkVersion
         versionCode rootProject.configs.versionCode

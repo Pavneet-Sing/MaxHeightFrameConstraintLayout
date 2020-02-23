@@ -1,4 +1,4 @@
-package com.pavneet_singh.maxchildheightframelayout
+package com.pavneet_singh.maxchildheightlayout
 
 import android.content.Context
 import android.os.Build

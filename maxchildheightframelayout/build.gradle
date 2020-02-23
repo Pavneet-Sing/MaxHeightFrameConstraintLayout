@@ -41,6 +41,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
     implementation "androidx.core:core-ktx:$rootProject.ktx_version"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout"
     testImplementation "junit:junit:$rootProject.junit"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junit_ext"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"

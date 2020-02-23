@@ -1,21 +1,21 @@
-package com.pavneet_singh.demo.maxchildheightframelayout
+package com.pavneet_singh.demo.maxchildheightframeconstraintlayout
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pavneet_singh.temp.BlueFragment
 import com.example.pavneet_singh.temp.YellowFragment
-import com.pavneet_singh.demo.maxchildheightframelayout.fragments.GreenFragment
+import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.GreenFragment
 
 /**
  * Created by Pavneet_Singh on 2020-02-19.
  */
 
-class MainActivity : AppCompatActivity() {
+class MaxConstraintLayoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_maxconstraintlayout)
 
         // onClick handlers
         findViewById<Button>(R.id.btn_show_blue).setOnClickListener {
