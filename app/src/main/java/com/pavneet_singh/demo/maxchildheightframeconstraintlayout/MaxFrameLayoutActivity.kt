@@ -3,8 +3,8 @@ package com.pavneet_singh.demo.maxchildheightframeconstraintlayout
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.pavneet_singh.temp.BlueFragment
-import com.example.pavneet_singh.temp.YellowFragment
+import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.BlueFragment
+import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.YellowFragment
 import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.GreenFragment
 
 /**
