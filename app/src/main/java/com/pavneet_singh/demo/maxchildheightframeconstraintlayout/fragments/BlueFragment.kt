@@ -1,4 +1,4 @@
-package com.example.pavneet_singh.temp
+package com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,12 +11,4 @@ import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.R
  * Created by Pavneet_Singh on 2020-02-17.
  */
 
-class BlueFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.blue, container, false)
-    }
-}
+class BlueFragment : Fragment(R.layout.blue)

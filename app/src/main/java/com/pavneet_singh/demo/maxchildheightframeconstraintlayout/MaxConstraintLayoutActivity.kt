@@ -6,9 +6,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.pavneet_singh.temp.BlueFragment
-import com.example.pavneet_singh.temp.YellowFragment
+import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.BlueFragment
 import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.GreenFragment
+import com.pavneet_singh.demo.maxchildheightframeconstraintlayout.fragments.YellowFragment
 
 /**
  * Created by Pavneet_Singh on 2020-02-19.
@@ -59,7 +59,7 @@ class MaxConstraintLayoutActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menu?.add(0,0,0,"Show FrameActivity")
+        menu?.add(0, 0, 0, "Show FrameActivity")
         return super.onCreateOptionsMenu(menu)
     }
 
